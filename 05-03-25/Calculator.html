@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+        .display {
+            grid-column: span 4;
+            background: #333;
+            color: white;
+            text-align: right;
+            padding: 15px;
+            font-size: 2rem;
+            border-radius: 5px;
+        }
+        button {
+            background: #666;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            cursor: not-allowed;
+        }
+        button:hover {
+            background: #888;
+        }
+        .equal {
+            grid-column: span 2;
+            background: #888;
+        }
+        .equal:hover {
+            background: #888;
+        }
+    </style> 
+</head>
+<body> 
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>*</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <button>C</button>
+        <button>0</button>
+        <button>.</button>
+        <button>+</button>
+        <button class="equal">=</button>
+    </div>
+</body>
+</html>
+
+
