@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            margin : 0;
+            padding:0;
+            background-color: aquamarine;
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            
+        }
+        .counter-container {
+            width:300px;
+
+        }
+    </style>
+</head>
+    <body>
+        <div class = "counter-container">
+            <h1>COUNTER</h1>
+            <p id="result">0</p>
+            <button onclick="sub()">-2</button>
+            <button onclick="add()">+2</button>
+            <button onclick="mul()">*2</button>
+            <button onclick="div()">/2</button>
+            <button onclick="mod()">%2</button>
+            <button onclick="reset()">Reset</button>
+
+        </div>
+        <script>
+            let count = 0
+            function mul(){
+                count = count * 2
+                document.getElementById('result').innerHTML = count
+            }
+            function mod(){
+                count = count % 2
+                document.getElementById('result').innerHTML = count
+            }
+            function add(){
+                count = count + 2
+                document.getElementById('result').innerHTML = count
+            }
+            function sub(){
+                count = count - 2
+                document.getElementById('result').innerHTML = count
+            }
+            function div(){
+                count = count / 2
+                document.getElementById('result').innerHTML = count
+            }
+            function reset(){
+                count = 0
+                document.getElementById('result').innerHTML = count
+            }
+            document.getElementById('result').innerHTML = count
+        </script>
+    </body>
+</html>
